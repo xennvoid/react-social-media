@@ -1,0 +1,19 @@
+.subscription {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .5rem 0;
+    padding: .7rem;
+    border-radius: .3rem;
+    background-color: white;
+}
+
+.delete {
+    padding: .5rem;
+    background-color: rgb(3 133 244);
+    border-radius: 1rem;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}

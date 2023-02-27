@@ -1,0 +1,32 @@
+@import '../../styles/mixin.scss';
+
+.container {
+    flex: 1 0 0;
+    position: sticky;
+    top:69px;
+    height: calc(100vh - 69px);
+    overflow: scroll;
+
+    @include mobile {
+        display: none;
+    }
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.link {
+    color:black;
+    text-decoration: none;
+    font-weight: 500;
+
+    li{
+        display: flex;
+        align-items: center;
+
+        span {
+            margin-left: 10px;
+        }
+    }
+} 

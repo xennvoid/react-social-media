@@ -1,0 +1,68 @@
+.container {
+    position: relative;
+    background-color: #000;
+}
+
+.input {
+    width: 100%;
+    padding: 1rem 1rem 2rem 1rem;
+    height: 150px;
+    outline: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    resize: none;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.input::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.input::placeholder {
+
+}
+
+.assets {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+}
+
+.preview {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+.label {
+
+}
+
+.image, .download {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.image {
+    color: white;
+}
+
+.download {
+    color: white;
+}
+
+.attachments {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.file {
+    display: none;
+    visibility: hidden;
+}

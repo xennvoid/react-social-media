@@ -1,0 +1,105 @@
+.card {
+    padding: 1rem;
+    -webkit-box-shadow: -5px 10px 26px 0px rgb(239 225 225 / 42%);
+    -moz-box-shadow: -5px 10px 26px 0px rgb(239 225 225 / 42%);
+    box-shadow: -5px 10px 26px 0px rgb(239 225 225 / 42%);
+    border-radius: 1rem;
+    background-color: #fff;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+}
+
+.time {
+    margin-top: 10px;
+}
+
+.time {
+    font-size: 12px;
+    color:rgb(160, 152, 152);
+}
+
+.settings {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.delete {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    padding: .5rem;
+    background-color: #9e9e9e6b;
+    border-radius: 1rem;
+    color: black;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.content {
+    margin: 1rem 0;
+    font-size: 16px;
+}
+
+.description {
+
+}
+
+.image {
+    padding: 1rem 0;
+}
+
+.image img{
+    height: auto;
+    max-height: 60vh;
+	max-width: 100%;
+    object-fit: cover;
+}
+
+.actions {
+    display: flex;
+    font-size: 15px;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.action svg {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.action span {
+    margin-left: 5px;
+}
+
+.action:last-child {
+    margin-right: 0;
+}
+
+.justifyCenter {
+    display: flex;
+    justify-content: center;
+}
