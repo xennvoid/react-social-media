@@ -80,6 +80,7 @@ const UserUpdate = () => {
                     name="password"
                     value={formData.password}
                     onChange={handleInputChange}
+                    autoComplete="off"
                 />
             </div>
 

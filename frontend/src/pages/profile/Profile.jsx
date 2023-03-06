@@ -2,19 +2,22 @@ import React, { useContext, useEffect } from 'react'
 import Posts from '../../components/posts/Posts'
 import styles from './profile.module.scss'
 import userPng from '../../assets/icons/user.png'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { sendRequest } from '../../requestPattern'
 import { useQuery, useQueryClient } from 'react-query'
 import { AuthContext } from '../../context/authContext'
 import PostCreate from '../../components/postCreate/PostCreate'
 import { useInView } from 'react-intersection-observer'
 import usePosts from '../../hooks/usePosts'
+import { RiWechatPayFill } from 'react-icons/ri'
+import { FaRocketchat } from 'react-icons/fa'
 
 const Profile = () => {
 
     const { ref, inView } = useInView()
     const { currentUser } = useContext(AuthContext)
     const { id: profileId } = useParams()
+    const navigate = useNavigate()
 
     const queryClient = useQueryClient()
 
@@ -54,6 +57,11 @@ const Profile = () => {
             fetchNextPage()
         }
     }, [inView])
+
+    const openChat = async () => {
+        const data = await sendRequest.post(`/chats/create`, { secondUserId: profileId }).then(res => res.data)
+        navigate(`/chats/${data}`)
+    }
 
     return (
         <div className={styles.container}>
@@ -101,6 +109,9 @@ const Profile = () => {
                                     }}>
                                     Subscribe
                                 </button>)
+                        }
+                        {profileId != currentUser.id &&
+                            <FaRocketchat size={36} cursor="pointer" onClick={openChat} />
                         }
                     </div>
                     <div className={styles.right}>

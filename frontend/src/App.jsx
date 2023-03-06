@@ -13,6 +13,7 @@ import Subscriptions from './pages/subscriptions/Subscriptions'
 import UserUpdate from './pages/userUpdate/UserUpdate'
 import Funds from './pages/funds/Funds'
 import Chat from './pages/chat/Chat'
+import Chats from './pages/chats/Chats'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -86,7 +87,11 @@ function App() {
           element: <Funds />
         },
         {
-          path: "/chat",
+          path: "/chats",
+          element: <Chats />
+        },
+        {
+          path: "/chats/:id",
           element: <Chat />
         }
       ]

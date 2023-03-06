@@ -1,6 +1,6 @@
 .outlet {
     flex: 5 5 0;
-    min-height: 100vh;
+    min-height: calc(100vh - 69px);
     padding: 1rem;
     background-color: #bdc7ff;
 }

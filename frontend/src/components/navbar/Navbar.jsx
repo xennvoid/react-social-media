@@ -19,7 +19,7 @@ const Navbar = () => {
 
     const navigationItems = [
         { icon: <BiUser />, to: `profile/${currentUser.id}/subscribers` },
-        { icon: <BiMessageRounded />, to: `/chat` },
+        { icon: <BiMessageRounded />, to: `/chats` },
     ]
 
     const signOut = async () => {

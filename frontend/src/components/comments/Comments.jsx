@@ -4,10 +4,9 @@ import ProfileLink from '../profileLink/ProfileLink'
 import MyInput from '../UI/MyInput/MyInput'
 import Comment from '../comment/Comment'
 import { sendRequest } from '../../requestPattern'
-import { useQuery } from 'react-query'
 import { AuthContext } from '../../context/authContext'
 import moment from 'moment'
-import { useMutation, useQueryClient } from 'react-query'
+import { useQuery, useMutation, useQueryClient } from 'react-query'
 
 const Comments = ({ post, currentComment, changeComment, setCurrentComment }) => {
 
